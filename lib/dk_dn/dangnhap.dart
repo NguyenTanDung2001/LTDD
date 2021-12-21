@@ -9,36 +9,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget titleSection = Container(
-      padding: const EdgeInsets.all(32),
-      child: Row(
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start, //căn chỉnh cột
-              children: [
-                Container(
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: const Text(
-                    'Oeschinen Lake Campground',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                Text(
-                  'Kandersteg, Switzerland',
-                  style: TextStyle(
-                    color: Colors.grey[500],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-
     Color color = Theme.of(context).primaryColor;
 
     Widget buttonSection = Row(
@@ -53,19 +23,6 @@ class MyApp extends StatelessWidget {
           child: buildButtonColumn(color, Icons.arrow_back),
         ),
       ],
-    );
-
-    Widget textSection = const Padding(
-      padding: EdgeInsets.fromLTRB(0, 1, 20, 1),
-      child: Text(
-        'sellVN',
-        style: TextStyle(
-          fontSize: 50,
-          fontFamily: 'MyFont',
-          color: Colors.red,
-        ),
-        softWrap: true,
-      ),
     );
 
     Widget textSection2 = const Padding(
