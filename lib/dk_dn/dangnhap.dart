@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 const image_bg = AssetImage("images/image.jpg");
@@ -97,15 +99,45 @@ class MyApp extends StatelessWidget {
       decoration: InputDecoration(
         hintText: 'Enter your password...',
         contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(32.0),
+        ),
       ),
+    );
+
+    Widget loginButton = RaisedButton(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30.0),
+          side: const BorderSide(color: Colors.red)),
+      child: const Text('Đăng nhập'),
+      textColor: Colors.white,
+      color: Theme.of(context).errorColor,
+      elevation: 10.0,
+      splashColor: Colors.blueGrey,
+      onPressed: () {
+        // Perform some action
+      },
+    );
+
+    Widget registerButton = RaisedButton(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30.0),
+          side: const BorderSide(color: Colors.red)),
+      child: const Text('Chưa có tài khoản ?'),
+      textColor: Colors.white,
+      color: Theme.of(context).focusColor,
+      elevation: 10.0,
+      splashColor: Colors.blueGrey,
+      onPressed: () {
+        // Perform some action
+      },
     );
 
     precacheImage(image_bg, context);
     return MaterialApp(
       title: 'Bài tập 1',
       home: Scaffold(
-        backgroundColor: Colors.yellow[300], //,
+        backgroundColor: Colors.yellow[300],
         body: ListView(
           children: [
             buttonSection,
@@ -122,13 +154,15 @@ class MyApp extends StatelessWidget {
                 const SizedBox(height: 10.0),
                 password,
                 const SizedBox(height: 10.0),
-                const Text(
-                  'Hoặc đăng nhập qua',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    backgroundColor: Colors.white,
-                  ),
-                ),
+                loginButton,
+                registerButton,
+                const SizedBox(height: 10.0),
+                // const Text(
+                //   'Hoặc đăng nhập qua',
+                //   style: TextStyle(
+                //     fontWeight: FontWeight.bold,
+                //   ),
+                // ),
               ],
             ),
           ],
