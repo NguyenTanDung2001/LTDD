@@ -67,11 +67,11 @@ class MyApp extends StatelessWidget {
     );
 
     Widget textSection2 = const Padding(
-      padding: EdgeInsets.fromLTRB(50, 1, 1, 60),
+      padding: EdgeInsets.fromLTRB(10, 1, 1, 10),
       child: Text(
         'My Account',
         style: TextStyle(
-          fontSize: 50,
+          fontSize: 40,
           fontFamily: 'MyFont',
           color: Colors.red,
         ),
@@ -104,34 +104,34 @@ class MyApp extends StatelessWidget {
     precacheImage(image_bg, context);
     return MaterialApp(
       title: 'Bài tập 1',
-      home: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: image_bg,
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: Scaffold(
-          backgroundColor: Colors.transparent,
-          body: ListView(
-            children: [
-              buttonSection,
-              Column(
-                children: [
-                  Image.asset(
-                    'images/logoapp.png',
-                    width: 220,
-                    height: 220,
+      home: Scaffold(
+        backgroundColor: Colors.yellow[300], //,
+        body: ListView(
+          children: [
+            buttonSection,
+            Column(
+              children: [
+                Image.asset(
+                  'images/logoapp.png',
+                  width: 220,
+                  height: 220,
+                ),
+                textSection2,
+                const SizedBox(height: 10.0),
+                username,
+                const SizedBox(height: 10.0),
+                password,
+                const SizedBox(height: 10.0),
+                const Text(
+                  'Hoặc đăng nhập qua',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    backgroundColor: Colors.white,
                   ),
-                  textSection2,
-                  const SizedBox(height: 10.0),
-                  username,
-                  const SizedBox(height: 10.0),
-                  password,
-                ],
-              ),
-            ],
-          ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
