@@ -69,13 +69,35 @@ class MyApp extends StatelessWidget {
     Widget textSection2 = const Padding(
       padding: EdgeInsets.fromLTRB(50, 1, 1, 60),
       child: Text(
-        'Online',
+        'My Account',
         style: TextStyle(
           fontSize: 50,
           fontFamily: 'MyFont',
           color: Colors.red,
         ),
         softWrap: true,
+      ),
+    );
+
+    Widget username = TextFormField(
+      keyboardType: TextInputType.emailAddress,
+      autofocus: false,
+      initialValue: '',
+      decoration: InputDecoration(
+        hintText: 'Enter your email...',
+        contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+      ),
+    );
+
+    Widget password = TextFormField(
+      autofocus: false,
+      initialValue: '',
+      obscureText: true,
+      decoration: InputDecoration(
+        hintText: 'Enter your password...',
+        contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
       ),
     );
 
@@ -94,20 +116,18 @@ class MyApp extends StatelessWidget {
           body: ListView(
             children: [
               buttonSection,
-              titleSection,
               Column(
                 children: [
-                  textSection,
-                  Row(
-                    children: <Widget>[
-                      Image.asset(
-                        'images/Logo.png',
-                        width: 150,
-                        height: 150,
-                      ),
-                      textSection2,
-                    ],
+                  Image.asset(
+                    'images/logoapp.png',
+                    width: 220,
+                    height: 220,
                   ),
+                  textSection2,
+                  const SizedBox(height: 10.0),
+                  username,
+                  const SizedBox(height: 10.0),
+                  password,
                 ],
               ),
             ],
