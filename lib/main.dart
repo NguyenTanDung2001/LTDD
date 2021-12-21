@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app_doan/dk_dn/dangnhap.dart';
+import 'dk_dn/dangnhap.dart';
 //0306191323_PhamAnhKhoa
 
 void main() {
