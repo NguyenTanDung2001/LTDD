@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-const image_bg = AssetImage("images/image.jpg");
-
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -90,7 +88,6 @@ class MyApp extends StatelessWidget {
       },
     );
 
-    precacheImage(image_bg, context);
     return MaterialApp(
       title: 'Bài tập 1',
       home: Scaffold(
