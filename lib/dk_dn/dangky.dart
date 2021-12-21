@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class DangKy extends StatelessWidget {
+  const DangKy({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0),
               side: const BorderSide(color: Colors.red)),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           child: buildButtonColumn(color, Icons.arrow_back),
         ),
       ],
@@ -101,7 +103,8 @@ class MyApp extends StatelessWidget {
     );
 
     return MaterialApp(
-      title: 'Bài tập 1',
+      title: 'Đăng kí',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.yellow[300],
         body: ListView(

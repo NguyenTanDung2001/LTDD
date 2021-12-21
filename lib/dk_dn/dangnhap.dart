@@ -1,14 +1,14 @@
 // ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
+// ignore: unused_import
+import 'dangky.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class DangNhap extends StatelessWidget {
+  const DangNhap({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Color color = Theme.of(context).primaryColor;
-
     Widget buttonSection = Row(
       //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -85,11 +85,13 @@ class MyApp extends StatelessWidget {
       splashColor: Colors.blueGrey,
       onPressed: () {
         // Perform some action
+        Navigator.pushNamed(context, '/dangky');
       },
     );
 
     return MaterialApp(
-      title: 'Bài tập 1',
+      title: 'Đăng nhập',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.yellow[300],
         body: ListView(
@@ -109,6 +111,7 @@ class MyApp extends StatelessWidget {
                 password,
                 const SizedBox(height: 10.0),
                 loginButton,
+                const SizedBox(height: 5.0),
                 registerButton,
                 const SizedBox(height: 10.0),
                 // const Text(
