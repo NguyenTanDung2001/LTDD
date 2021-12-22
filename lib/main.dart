@@ -1,6 +1,7 @@
 import 'dk_dn/dangky.dart';
 import 'package:flutter/material.dart';
 import 'dk_dn/dangnhap.dart';
+import 'sanpham/sanpham.dart';
 
 //0306191323_PhamAnhKhoa
 
@@ -19,8 +20,10 @@ class MyApp extends StatelessWidget {
       routes: {
         '/dangnhap': (context) => const DangNhap(),
         '/dangky': (context) => const DangKy(),
+        //'/home': (context) => const HomeScreen(),
+        '/danhsachsanpham': (context) => const DanhSachSanPham(),
       },
-      initialRoute: '/dangnhap',
+      initialRoute: '/danhsachsanpham',
     );
   }
 }
