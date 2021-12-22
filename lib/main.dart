@@ -1,6 +1,5 @@
-import 'package:app_doan/trang_chu/trangchu.dart';
-
-import 'package:app_doan/dk_dn/dangky.dart';
+// @dart=2.12
+import 'dk_dn/dangky.dart';
 import 'package:flutter/material.dart';
 import 'dk_dn/dangnhap.dart';
 import 'trang_chu/trangchu.dart';
@@ -21,9 +20,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/dangnhap': (context) => const DangNhap(),
         '/dangky': (context) => const DangKy(),
-        '/trangchu': (context) => HomeScreen(),
+        '/homescreen': (context) => const HomeScreen(),
       },
-      initialRoute: '/trangchu',
+      initialRoute: '/dangnhap',
     );
   }
 }
