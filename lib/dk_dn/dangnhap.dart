@@ -99,13 +99,14 @@ class DangNhap extends StatelessWidget {
             // buttonSection,
             Column(
               children: [
+                const SizedBox(height: 10),
                 Image.asset(
                   'images/logoapp.png',
                   width: 220,
                   height: 220,
                 ),
                 textSection2,
-                const SizedBox(height: 10.0),
+                const SizedBox(height: 50.0),
                 username,
                 const SizedBox(height: 10.0),
                 password,
