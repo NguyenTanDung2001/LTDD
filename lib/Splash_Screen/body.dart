@@ -65,6 +65,7 @@ class Button extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       height: getProportionateScreenHeight(56),
+      // ignore: deprecated_member_use
       child: FlatButton(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
@@ -74,7 +75,7 @@ class Button extends StatelessWidget {
           Navigator.pushNamed(context, '/dangnhap');
         },
         child: Text(
-          "Continue",
+          "Tiếp tục",
           style: TextStyle(
             fontSize: getProportionateScreenWidth(18),
             color: Colors.white,
