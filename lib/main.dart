@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-import 'dk_dn/dangky.dart';
-=======
 import 'package:app_doan/Splash_Screen/splash.dart';
-import 'package:app_doan/trang_chu/trangchu.dart';
-
 import 'package:app_doan/dk_dn/dangky.dart';
->>>>>>> a0c95ea38485fff6f8d0bfbeb6703660ddaec334
 import 'package:flutter/material.dart';
 import 'dk_dn/dangnhap.dart';
 import 'sanpham/sanpham.dart';
@@ -27,17 +21,10 @@ class MyApp extends StatelessWidget {
       routes: {
         '/dangnhap': (context) => const DangNhap(),
         '/dangky': (context) => const DangKy(),
-<<<<<<< HEAD
-        //'/home': (context) => const HomeScreen(),
-        '/danhsachsanpham': (context) => const DanhSachSanPham(),
-      },
-      initialRoute: '/danhsachsanpham',
-=======
         // '/trangchu': (context) => HomeScreen(),
-        '/splash':(context)=>const Splash(),
+        '/splash': (context) => const Splash(),
       },
       initialRoute: '/splash',
->>>>>>> a0c95ea38485fff6f8d0bfbeb6703660ddaec334
     );
   }
 }
