@@ -3,8 +3,8 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
-  @override
   const HomeScreen({Key? key}) : super(key: key);
+  @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
