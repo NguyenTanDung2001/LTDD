@@ -1,3 +1,4 @@
+import 'package:app_doan/Splash_Screen/splash.dart';
 import 'package:app_doan/trang_chu/trangchu.dart';
 
 import 'package:app_doan/dk_dn/dangky.dart';
@@ -22,8 +23,9 @@ class MyApp extends StatelessWidget {
         '/dangnhap': (context) => const DangNhap(),
         '/dangky': (context) => const DangKy(),
         // '/trangchu': (context) => HomeScreen(),
+        '/splash':(context)=>const Splash(),
       },
-      initialRoute: '/dangnhap',
+      initialRoute: '/splash',
     );
   }
 }
