@@ -36,17 +36,22 @@ class DanhSachSanPham extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.yellow[300],
         appBar: AppBar(
-          title: const Card(
-            child: TextField(
-              decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.search),
-                  hintText: 'Bạn muốn ăn gì hôm nay?'),
-            ),
+          backgroundColor: Colors.yellow[300],
+          automaticallyImplyLeading: false,
+          title: Row(
+            children: [
+              buttonSection,
+              Image.asset(
+                'images/Logo.png',
+                width: 100,
+                height: 100,
+              ),
+            ],
           ),
         ),
         body: ListView(
           children: [
-            buttonSection,
+            thanhTimKiem,
           ],
         ),
       ),
