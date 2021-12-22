@@ -21,9 +21,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/dangnhap': (context) => const DangNhap(),
         '/dangky': (context) => const DangKy(),
-        '/trangchu': (context) => HomeScreen(),
+        // '/trangchu': (context) => HomeScreen(),
       },
-      initialRoute: '/trangchu',
+      initialRoute: '/dangnhap',
     );
   }
 }
