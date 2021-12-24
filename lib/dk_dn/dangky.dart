@@ -109,6 +109,7 @@ class DangKy extends StatelessWidget {
         backgroundColor: Colors.yellow[300],
         body: ListView(
           children: [
+            const SizedBox(height: 10.0),
             buttonSection,
             Column(
               children: [
@@ -151,7 +152,7 @@ class DangKy extends StatelessWidget {
       children: [
         Icon(icon, color: color),
         Container(
-          margin: const EdgeInsets.only(left: 10),
+          margin: const EdgeInsets.only(left: 0),
         ),
       ],
     );

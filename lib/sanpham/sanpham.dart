@@ -7,7 +7,7 @@ class DanhSachSanPham extends StatelessWidget {
   Widget build(BuildContext context) {
     Color color = Theme.of(context).primaryColor;
     Widget buttonSection = Row(
-      //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         // ignore: deprecated_member_use
         RaisedButton(
@@ -16,6 +16,20 @@ class DanhSachSanPham extends StatelessWidget {
               side: const BorderSide(color: Colors.red)),
           onPressed: () {},
           child: buildButtonColumn(color, Icons.arrow_back),
+        ),
+      ],
+    );
+
+    Widget buttonListType = Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        // ignore: deprecated_member_use
+        RaisedButton(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
+              side: const BorderSide(color: Colors.red)),
+          onPressed: () {},
+          child: buildButtonColumn(color, Icons.format_list_bulleted),
         ),
       ],
     );
@@ -39,12 +53,23 @@ class DanhSachSanPham extends StatelessWidget {
           backgroundColor: Colors.yellow[300],
           automaticallyImplyLeading: false,
           title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              buttonSection,
-              Image.asset(
-                'images/Logo.png',
-                width: 100,
-                height: 100,
+              Expanded(
+                child: buttonSection,
+              ),
+              const Expanded(
+                child: Text(
+                  'sellVN Online',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 16,
+                    fontFamily: 'MyFont',
+                  ),
+                ),
+              ),
+              Expanded(
+                child: buttonListType,
               ),
             ],
           ),
@@ -68,7 +93,9 @@ class DanhSachSanPham extends StatelessWidget {
       children: [
         Icon(icon, color: color),
         Container(
-          margin: const EdgeInsets.only(left: 10),
+          margin: const EdgeInsets.only(
+            left: 10,
+          ),
         ),
       ],
     );

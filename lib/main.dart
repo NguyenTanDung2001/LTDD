@@ -23,8 +23,9 @@ class MyApp extends StatelessWidget {
         '/dangky': (context) => const DangKy(),
         // '/trangchu': (context) => HomeScreen(),
         '/splash': (context) => const Splash(),
+        '/danhsachsanpham': (context) => const DanhSachSanPham(),
       },
-      initialRoute: '/splash',
+      initialRoute: '/danhsachsanpham',
     );
   }
 }
