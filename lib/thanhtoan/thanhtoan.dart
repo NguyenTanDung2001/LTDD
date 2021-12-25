@@ -34,18 +34,6 @@ class ThanhToan extends StatelessWidget {
       ],
     );
 
-    Widget thanhTimKiem = const Padding(
-      padding: EdgeInsets.fromLTRB(10, 1, 1, 10),
-      child: TextField(
-        cursorColor: Colors.red,
-        decoration: InputDecoration(
-          prefixIcon: Icon(Icons.search),
-          hintText: 'Bạn muốn ăn gì hôm nay?',
-          labelStyle: TextStyle(color: Colors.red),
-        ),
-      ),
-    );
-
     return MaterialApp(
       title: 'Món ăn',
       debugShowCheckedModeBanner: false,
@@ -78,9 +66,9 @@ class ThanhToan extends StatelessWidget {
           ),
         ),
         body: ListView(
-          children: const [
-            SizedBox(height: 15.0),
-            Text(
+          children: <Widget>[
+            const SizedBox(height: 15.0),
+            const Text(
               'Thanh Toán',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -89,27 +77,37 @@ class ThanhToan extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(10, 1, 10, 10),
-              child: Text(
-                'Thay đổi địa chỉ',
-                textAlign: TextAlign.right,
-                style: TextStyle(
-                  decoration: TextDecoration.underline,
-                  color: Colors.red,
-                  fontSize: 15,
+            const SizedBox(height: 7.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.fromLTRB(1, 1, 10, 1),
+                  child: Text(
+                    '65 Huỳnh Thúc Kháng, P.Bến Nghé, Q.1, Tp.HCM',
+                    textAlign: TextAlign.right,
+                    style: TextStyle(
+                      fontSize: 14,
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(1, 1, 10, 1),
-              child: Text(
-                '65 Huỳnh Thúc Kháng, P.Bến Nghé, Q.1, Tp.HCM',
-                textAlign: TextAlign.right,
-                style: TextStyle(
-                  fontSize: 14,
+                // ignore: deprecated_member_use
+                FlatButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: const BorderSide(color: Colors.red)),
+                  color: Colors.white,
+                  textColor: Colors.blue,
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  onPressed: () {},
+                  child: const Text(
+                    "Thay đổi địa chỉ",
+                    style: TextStyle(
+                      fontSize: 14.0,
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
           ],
         ),

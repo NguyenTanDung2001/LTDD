@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class GioHang extends StatelessWidget {
@@ -78,9 +79,9 @@ class GioHang extends StatelessWidget {
           ),
         ),
         body: ListView(
-          children: const [
-            SizedBox(height: 25.0),
-            Text(
+          children: <Widget>[
+            const SizedBox(height: 18.0),
+            const Text(
               'Giỏ hàng',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -89,17 +90,39 @@ class GioHang extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(10, 1, 10, 10),
-              child: Text(
-                'Xoá toàn bộ',
-                textAlign: TextAlign.right,
-                style: TextStyle(
-                  decoration: TextDecoration.underline,
-                  color: Colors.red,
-                  fontSize: 15,
+            const SizedBox(height: 7.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.fromLTRB(1, 1, 10, 1),
+                  child: Text(
+                    'Danh sách món ăn',
+                    textAlign: TextAlign.right,
+                    style: TextStyle(
+                      fontSize: 19,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
-              ),
+                // ignore: deprecated_member_use
+                FlatButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: const BorderSide(color: Colors.red)),
+                  color: Colors.white,
+                  textColor: Colors.blue,
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  onPressed: () {},
+                  child: const Text(
+                    "Xoá toàn bộ",
+                    style: TextStyle(
+                      fontSize: 14.0,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
