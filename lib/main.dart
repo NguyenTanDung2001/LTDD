@@ -5,7 +5,7 @@ import 'package:app_doan/yeuthich/yeuthich.dart';
 import 'package:flutter/material.dart';
 import 'dk_dn/dangnhap.dart';
 import 'sanpham/sanpham.dart';
-
+import 'thanhtoan/thanhtoan.dart';
 //0306191323_PhamAnhKhoa
 
 void main() {
@@ -28,8 +28,9 @@ class MyApp extends StatelessWidget {
         '/danhsachsanpham': (context) => const DanhSachSanPham(),
         '/monanyeuthich': (context) => const MonAnYeuThich(),
         '/giohang': (context) => const GioHang(),
+        '/thanhtoan': (context) => const ThanhToan(),
       },
-      initialRoute: '/giohang',
+      initialRoute: '/thanhtoan',
     );
   }
 }
