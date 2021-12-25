@@ -1,7 +1,10 @@
+import 'dart:html';
+
+import 'package:app_doan/Splash_Screen/constants.dart';
 import 'package:flutter/material.dart';
 
-class DanhSachSanPham extends StatelessWidget {
-  const DanhSachSanPham({Key? key}) : super(key: key);
+class GioHang extends StatelessWidget {
+  const GioHang({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -47,10 +50,10 @@ class DanhSachSanPham extends StatelessWidget {
     );
 
     return MaterialApp(
-      title: 'danh sach san pham',
+      title: 'Giỏ hàng',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.yellow[300],
+        //backgroundColor: Colors.yellow[300],
         appBar: AppBar(
           backgroundColor: Colors.yellow[300],
           automaticallyImplyLeading: false,
@@ -78,8 +81,29 @@ class DanhSachSanPham extends StatelessWidget {
           ),
         ),
         body: ListView(
-          children: [
-            thanhTimKiem,
+          children: const [
+            SizedBox(height: 25.0),
+            Text(
+              'Giỏ hàng',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(10, 1, 10, 10),
+              child: Text(
+                'Xoá toàn bộ',
+                textAlign: TextAlign.right,
+                style: TextStyle(
+                  decoration: TextDecoration.underline,
+                  color: Colors.red,
+                  fontSize: 15,
+                ),
+              ),
+            ),
           ],
         ),
       ),

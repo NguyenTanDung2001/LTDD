@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DanhSachSanPham extends StatelessWidget {
-  const DanhSachSanPham({Key? key}) : super(key: key);
+class MonAnYeuThich extends StatelessWidget {
+  const MonAnYeuThich({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -47,10 +47,10 @@ class DanhSachSanPham extends StatelessWidget {
     );
 
     return MaterialApp(
-      title: 'danh sach san pham',
+      title: 'Món ăn',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.yellow[300],
+        //backgroundColor: Colors.yellow[300],
         appBar: AppBar(
           backgroundColor: Colors.yellow[300],
           automaticallyImplyLeading: false,
@@ -80,6 +80,16 @@ class DanhSachSanPham extends StatelessWidget {
         body: ListView(
           children: [
             thanhTimKiem,
+            const SizedBox(height: 10.0),
+            const Text(
+              'Yêu thích',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         ),
       ),

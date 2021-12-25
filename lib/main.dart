@@ -1,5 +1,7 @@
 import 'package:app_doan/Splash_Screen/splash.dart';
 import 'package:app_doan/dk_dn/dangky.dart';
+import 'package:app_doan/thanhtoan/giohang.dart';
+import 'package:app_doan/yeuthich/yeuthich.dart';
 import 'package:flutter/material.dart';
 import 'dk_dn/dangnhap.dart';
 import 'sanpham/sanpham.dart';
@@ -24,8 +26,10 @@ class MyApp extends StatelessWidget {
         // '/trangchu': (context) => HomeScreen(),
         '/splash': (context) => const Splash(),
         '/danhsachsanpham': (context) => const DanhSachSanPham(),
+        '/monanyeuthich': (context) => const MonAnYeuThich(),
+        '/giohang': (context) => const GioHang(),
       },
-      initialRoute: '/danhsachsanpham',
+      initialRoute: '/giohang',
     );
   }
 }
