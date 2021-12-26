@@ -1,3 +1,4 @@
+import 'package:app_doan/bottom_nav_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -78,6 +79,7 @@ class GioHang extends StatelessWidget {
             ],
           ),
         ),
+        bottomNavigationBar: BottomNavBar(),
         body: ListView(
           children: <Widget>[
             const SizedBox(height: 18.0),

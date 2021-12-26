@@ -1,3 +1,4 @@
+import 'package:app_doan/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
 class MonAnYeuThich extends StatelessWidget {
@@ -77,6 +78,7 @@ class MonAnYeuThich extends StatelessWidget {
             ],
           ),
         ),
+        bottomNavigationBar: BottomNavBar(),
         body: ListView(
           children: [
             thanhTimKiem,
