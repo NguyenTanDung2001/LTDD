@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 
 AppBar homeAppBar(BuildContext context) {
+  Color color = Theme.of(context).primaryColor;
   Column buildButtonColumn(
     Color color,
     IconData icon,
@@ -21,7 +22,6 @@ AppBar homeAppBar(BuildContext context) {
     );
   }
 
-  Color color = Theme.of(context).primaryColor;
   Widget buttonSection = Row(
     //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [
@@ -30,13 +30,15 @@ AppBar homeAppBar(BuildContext context) {
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30.0),
             side: const BorderSide(color: Colors.red)),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pop(context);
+        },
         child: buildButtonColumn(color, Icons.arrow_back),
       ),
     ],
   );
 
-  Widget buttonListType = Row(
+  Widget buttonThongBao = Row(
     mainAxisAlignment: MainAxisAlignment.end,
     children: [
       // ignore: deprecated_member_use
@@ -45,7 +47,10 @@ AppBar homeAppBar(BuildContext context) {
             borderRadius: BorderRadius.circular(30.0),
             side: const BorderSide(color: Colors.red)),
         onPressed: () {},
-        child: buildButtonColumn(color, Icons.format_list_bulleted),
+        child: buildButtonColumn(
+          color,
+          Icons.notifications_active,
+        ),
       ),
     ],
   );
@@ -71,7 +76,7 @@ AppBar homeAppBar(BuildContext context) {
           ),
         ),
         Expanded(
-          child: buttonListType,
+          child: buttonThongBao,
         ),
       ],
     ),

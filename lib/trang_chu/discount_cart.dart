@@ -15,17 +15,17 @@ class DiscountCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(
+          const Text(
             "Offers & Discounts",
             style: TextStyle(fontWeight: FontWeight.bold, color: kTextColor),
           ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 20),
+            margin: const EdgeInsets.symmetric(vertical: 20),
             width: double.infinity,
             height: 166,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
+              image: const DecorationImage(
                 fit: BoxFit.fill,
                 image: AssetImage("images/beyond-meat-mcdonalds"),
               ),
@@ -35,7 +35,7 @@ class DiscountCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xFFFF961F).withOpacity(0.7),
+                    const Color(0xFFFF961F).withOpacity(0.7),
                     kPrimaryColor.withOpacity(0.7),
                   ],
                 ),
@@ -45,11 +45,15 @@ class DiscountCard extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     Expanded(
-                      child: SvgPicture.asset("icons/macdonalds.svg"),
+                      child: Image.asset(
+                        'images/logoapp.png',
+                        width: 220,
+                        height: 220,
+                      ),
                     ),
                     Expanded(
                       child: RichText(
-                        text: TextSpan(
+                        text: const TextSpan(
                           style: TextStyle(color: Colors.white),
                           children: [
                             TextSpan(
@@ -65,7 +69,7 @@ class DiscountCard extends StatelessWidget {
                             ),
                             TextSpan(
                               text:
-                                  "at MacDonald's on your first order & Instant cashback",
+                                  "at sellVN on your first order & Instant cashback",
                               style: TextStyle(fontSize: 10),
                             ),
                           ],
