@@ -213,15 +213,7 @@ packages:
       name: path_provider_windows
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
-    version: "0.0.5"
-  pedantic:
-    dependency: transitive
-    description:
-      name: pedantic
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.11.1"
+    version: "2.0.4"
   petitparser:
     dependency: transitive
     description:
@@ -229,9 +221,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.4.0"
-=======
-    version: "2.0.4"
->>>>>>> da419e3ba0245537475e55469347d4c7db3ed2fd
   platform:
     dependency: transitive
     description:
@@ -258,13 +247,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
-  smooth_star_rating:
-    dependency: "direct main"
-    description:
-      name: smooth_star_rating
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.1"
   source_span:
     dependency: transitive
     description:
@@ -334,8 +316,7 @@ packages:
       name: xdg_directories
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
-    version: "0.1.2"
+    version: "0.2.0"
   xml:
     dependency: transitive
     description:
@@ -345,10 +326,4 @@ packages:
     version: "5.3.1"
 sdks:
   dart: ">=2.14.0 <3.0.0"
-  flutter: ">=1.24.0-7.0"
-=======
-    version: "0.2.0"
-sdks:
-  dart: ">=2.14.0 <3.0.0"
   flutter: ">=2.5.0"
->>>>>>> da419e3ba0245537475e55469347d4c7db3ed2fd

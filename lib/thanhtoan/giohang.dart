@@ -2,6 +2,8 @@ import 'package:app_doan/bottom_nav_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../app_bar.dart';
+
 class GioHang extends StatelessWidget {
   const GioHang({Key? key}) : super(key: key);
 
@@ -53,32 +55,7 @@ class GioHang extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         //backgroundColor: Colors.yellow[300],
-        appBar: AppBar(
-          backgroundColor: Colors.yellow[300],
-          automaticallyImplyLeading: false,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: buttonSection,
-              ),
-              const Expanded(
-                child: Text(
-                  'sellVN Online',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 16,
-                    fontFamily: 'MyFont',
-                  ),
-                ),
-              ),
-              Expanded(
-                child: buttonListType,
-              ),
-            ],
-          ),
-        ),
+        appBar: homeAppBar(context),
         bottomNavigationBar: BottomNavBar(),
         body: ListView(
           children: <Widget>[

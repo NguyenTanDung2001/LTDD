@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         '/giohang': (context) => const GioHang(),
         '/thanhtoan': (context) => const ThanhToan(),
       },
-      initialRoute: '/trangchu',
+      initialRoute: '/monanyeuthich',
     );
   }
 }
