@@ -6,8 +6,10 @@ import 'package:app_doan/thanhtoan/giohang.dart';
 import 'package:app_doan/yeuthich/yeuthich.dart';
 import 'package:flutter/material.dart';
 import 'dk_dn/dangnhap.dart';
-import 'sanpham/sanpham.dart';
+
 import 'thanhtoan/thanhtoan.dart';
+import 'yeuthich/sanphamyeuthich.dart';
+
 //0306191323_PhamAnhKhoa
 
 void main() {
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primaryColor: kPrimaryColor,
           scaffoldBackgroundColor: Colors.white,
-          textTheme: TextTheme(
+          textTheme: const TextTheme(
             bodyText1: TextStyle(color: ksecondaryColor),
             bodyText2: TextStyle(color: ksecondaryColor),
           )),
@@ -34,10 +36,11 @@ class MyApp extends StatelessWidget {
         '/dangky': (context) => const DangKy(),
         '/trangchu': (context) => HomeScreen(),
         '/splash': (context) => const Splash(),
-        '/danhsachsanpham': (context) => const DanhSachSanPham(),
+        // '/danhsachsanpham': (context) => const DanhSachMonAn(),
         '/monanyeuthich': (context) => const MonAnYeuThich(),
         '/giohang': (context) => const GioHang(),
         '/thanhtoan': (context) => const ThanhToan(),
+        '/listyeuthich': (context) => const DachSachMonAnYeuThich(),
       },
       initialRoute: '/splash',
     );

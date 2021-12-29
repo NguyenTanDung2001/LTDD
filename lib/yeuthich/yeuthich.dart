@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../app_bar.dart';
 import '../search_box.dart';
+import 'sanphamyeuthich.dart';
 
 class MonAnYeuThich extends StatelessWidget {
   const MonAnYeuThich({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class MonAnYeuThich extends StatelessWidget {
       home: Scaffold(
         //backgroundColor: Colors.yellow[300],
         appBar: homeAppBar(context),
-        bottomNavigationBar: BottomNavBar(),
+        bottomNavigationBar: const BottomNavBar(),
         body: ListView(
           children: [
             SearchBox(
@@ -31,6 +32,14 @@ class MonAnYeuThich extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            const DachSachMonAnYeuThich(),
+            const DachSachMonAnYeuThich(),
+            const DachSachMonAnYeuThich(),
+            const DachSachMonAnYeuThich(),
+            const DachSachMonAnYeuThich(),
+            const DachSachMonAnYeuThich(),
+            const DachSachMonAnYeuThich(),
+            const DachSachMonAnYeuThich(),
           ],
         ),
       ),

@@ -1,7 +1,8 @@
 import 'package:app_doan/bottom_nav_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import '../sanpham/danhsachsanpham.dart';
+// import '../sanpham.dart';
 import '../app_bar.dart';
 
 class GioHang extends StatelessWidget {
@@ -33,7 +34,7 @@ class GioHang extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Padding(
-                  padding: EdgeInsets.fromLTRB(1, 1, 10, 1),
+                  padding: EdgeInsets.fromLTRB(20, 1, 10, 1),
                   child: Text(
                     'Danh sách món ăn',
                     textAlign: TextAlign.right,
@@ -62,6 +63,12 @@ class GioHang extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: 12),
+            DachSachMonAn(),
+            DachSachMonAn(),
+            DachSachMonAn(),
+            DachSachMonAn(),
+            DachSachMonAn(),
           ],
         ),
       ),
