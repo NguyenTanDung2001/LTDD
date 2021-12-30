@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../sanpham/danhsachsanpham.dart';
 // import '../sanpham.dart';
 import '../app_bar.dart';
+import 'thanhtoan.dart';
 
 class GioHang extends StatelessWidget {
   const GioHang({Key? key}) : super(key: key);
@@ -16,7 +17,21 @@ class GioHang extends StatelessWidget {
       home: Scaffold(
         //backgroundColor: Colors.yellow[300],
         appBar: homeAppBar(context),
-        bottomNavigationBar: BottomNavBar(),
+        bottomNavigationBar: Container(
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 15),
+              primary: Colors.red,
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, '/thanhtoan');
+            },
+            child: const Text(
+              'Thanh toán',
+              style: TextStyle(fontSize: 28),
+            ),
+          ),
+        ),
         body: ListView(
           children: <Widget>[
             const SizedBox(height: 18.0),
@@ -64,6 +79,7 @@ class GioHang extends StatelessWidget {
               ],
             ),
             SizedBox(height: 12),
+            DachSachMonAn(),
             DachSachMonAn(),
             DachSachMonAn(),
             DachSachMonAn(),
