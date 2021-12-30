@@ -1,13 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:count_stepper/count_stepper.dart';
 
 class DachSachMonAn extends StatelessWidget {
   const DachSachMonAn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Widget SL = Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+      CountStepper(
+        iconColor: Theme.of(context).primaryColor,
+        defaultValue: 1,
+        max: 20,
+        min: 1,
+        iconDecrementColor: Colors.red,
+        splashRadius: 25,
+        onPressed: (value) {},
+      )
+    ]);
+
     Widget Thongtin = Padding(
-      padding: const EdgeInsets.fromLTRB(1, 1, 1, 1),
+      padding: const EdgeInsets.fromLTRB(0, 1, 0, 1),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: const [
@@ -16,7 +29,10 @@ class DachSachMonAn extends StatelessWidget {
           ),
           Text(
             'Giá: 20000 VND',
-            style: TextStyle(fontSize: 11),
+            style: TextStyle(
+              fontSize: 11,
+              color: Colors.red,
+            ),
           ),
         ],
       ),
@@ -41,6 +57,9 @@ class DachSachMonAn extends StatelessWidget {
             ),
             Expanded(
               child: Thongtin,
+            ),
+            Expanded(
+              child: SL,
             ),
             Expanded(
               child: IconButton(
