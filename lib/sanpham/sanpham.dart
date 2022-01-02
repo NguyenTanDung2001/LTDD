@@ -45,6 +45,8 @@ class DanhSachSanPham extends StatelessWidget {
         ),
       ),
     );
+    /*  Widget sanpham = const Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20)) */
 
     return MaterialApp(
       title: 'danh sach san pham',

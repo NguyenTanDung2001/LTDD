@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/dangnhap': (context) => const DangNhap(),
         '/dangky': (context) => const DangKy(),
-        // '/trangchu': (context) => HomeScreen(),
+        '/trangchu': (context) => HomeScreen(),
         '/splash': (context) => const Splash(),
         '/danhsachsanpham': (context) => const DanhSachSanPham(),
         '/monanyeuthich': (context) => const MonAnYeuThich(),
