@@ -5,6 +5,7 @@ import '../app_bar.dart';
 
 class ThanhToan extends StatelessWidget {
   const ThanhToan({Key? key}) : super(key: key);
+  static String routeName = "/thanhtoan";
 
   @override
   Widget build(BuildContext context) {
