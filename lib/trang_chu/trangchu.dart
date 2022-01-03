@@ -7,6 +7,7 @@ import '../app_bar.dart';
 import '../bottom_nav_bar.dart';
 
 class HomeScreen extends StatelessWidget {
+  static String routeName = "/trangchu";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -56,7 +56,9 @@ class BottomNavBar extends StatelessWidget {
               width: 50,
               height: 50,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/taikhoan');
+            },
           ),
         ],
       ),

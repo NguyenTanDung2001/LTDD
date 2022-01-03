@@ -5,6 +5,7 @@ import 'dangky.dart';
 
 class DangNhap extends StatelessWidget {
   const DangNhap({Key? key}) : super(key: key);
+  static String routeName = "/dangnhap";
 
   @override
   Widget build(BuildContext context) {

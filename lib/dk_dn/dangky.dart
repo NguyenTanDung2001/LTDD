@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class DangKy extends StatelessWidget {
   const DangKy({Key? key}) : super(key: key);
+  static String routeName = "/dangky";
 
   @override
   Widget build(BuildContext context) {
