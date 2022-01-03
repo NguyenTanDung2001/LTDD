@@ -32,6 +32,7 @@ class MonAnYeuThich extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            SizedBox(height: 18),
             const DachSachMonAnYeuThich(),
             const DachSachMonAnYeuThich(),
             const DachSachMonAnYeuThich(),
