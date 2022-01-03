@@ -8,7 +8,7 @@ import 'package:app_doan/yeuthich/yeuthich.dart';
 import 'package:flutter/material.dart';
 import 'dk_dn/dangnhap.dart';
 import 'package:app_doan/taikhoan/taikhoan.dart';
-
+import 'sanpham/danhsachsanpham.dart';
 import 'thanhtoan/thanhtoan.dart';
 import 'yeuthich/sanphamyeuthich.dart';
 
@@ -33,20 +33,20 @@ class MyApp extends StatelessWidget {
             bodyText1: TextStyle(color: ksecondaryColor),
             bodyText2: TextStyle(color: ksecondaryColor),
           )),
-      // routes: {
-      //   '/dangnhap': (context) => const DangNhap(),
-      //   '/dangky': (context) => const DangKy(),
-      //   '/trangchu': (context) => HomeScreen(),
-      //   '/splash': (context) => const Splash(),
-      //   // '/danhsachsanpham': (context) => const DanhSachMonAn(),
-      //   '/monanyeuthich': (context) => const MonAnYeuThich(),
-      //   '/giohang': (context) => const GioHang(),
-      //   '/thanhtoan': (context) => const ThanhToan(),
-      //   '/listyeuthich': (context) => const DachSachMonAnYeuThich(),
-      //   '/taikhoan':(context)=>const taikhoan(),
-      // },
+      routes: {
+        '/dangnhap': (context) => const DangNhap(),
+        '/dangky': (context) => const DangKy(),
+        '/trangchu': (context) => HomeScreen(),
+        '/splash': (context) => const Splash(),
+        '/danhsachsanpham': (context) => const DachSachMonAn(),
+        '/monanyeuthich': (context) => const MonAnYeuThich(),
+        '/giohang': (context) => const GioHang(),
+        '/thanhtoan': (context) => const ThanhToan(),
+        '/listyeuthich': (context) => const DachSachMonAnYeuThich(),
+        '/taikhoan': (context) => const taikhoan(),
+      },
       initialRoute: Splash.routeName,
-      routes: routes,
+      //routes: routes,
     );
   }
 }
