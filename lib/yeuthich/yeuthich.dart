@@ -7,6 +7,7 @@ import 'sanphamyeuthich.dart';
 
 class MonAnYeuThich extends StatelessWidget {
   const MonAnYeuThich({Key? key}) : super(key: key);
+  static String routeName = "/yeuthich";
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +33,7 @@ class MonAnYeuThich extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            SizedBox(height: 18),
             const DachSachMonAnYeuThich(),
             const DachSachMonAnYeuThich(),
             const DachSachMonAnYeuThich(),

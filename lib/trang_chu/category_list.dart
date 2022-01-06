@@ -1,5 +1,8 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:app_doan/trang_chu/category_item.dart';
+import 'package:app_doan/sanpham/danhsachsanpham.dart';
 
 class CategoryList extends StatelessWidget {
   const CategoryList({
@@ -11,31 +14,113 @@ class CategoryList extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          CategoryItem(
-            title: "Đề xuất",
-            isActive: true,
-            press: () {},
+        ///mainAxisAlignment: MainAxisAlignment.end,
+        //crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(width: 10),
+          FlatButton(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+                side: const BorderSide(color: Colors.red)),
+            color: Colors.yellow,
+            textColor: Colors.blue,
+            padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+            onPressed: () {},
+            child: const Text(
+              "Đề xuất",
+              style: TextStyle(
+                fontSize: 14.0,
+              ),
+            ),
           ),
-          CategoryItem(
-            title: "Cơm",
-            press: () {
-              Navigator.pushNamed(context, '/monanyeuthich');
+          SizedBox(width: 7),
+          FlatButton(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+                side: const BorderSide(color: Colors.red)),
+            color: Colors.white,
+            textColor: Colors.blue,
+            padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+            onPressed: () {},
+            child: const Text(
+              "Cơm",
+              style: TextStyle(
+                fontSize: 14.0,
+              ),
+            ),
+          ),
+          SizedBox(width: 7),
+          FlatButton(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+                side: const BorderSide(color: Colors.red)),
+            color: Colors.white,
+            textColor: Colors.blue,
+            padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+            onPressed: () {
+              Navigator.pushNamed(context, '/chitietsanpham');
             },
+            child: const Text(
+              "Bún",
+              style: TextStyle(
+                fontSize: 14.0,
+              ),
+            ),
           ),
-          CategoryItem(
-            title: "Phở",
-            press: () {},
+          SizedBox(width: 7),
+          FlatButton(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+                side: const BorderSide(color: Colors.red)),
+            color: Colors.white,
+            textColor: Colors.blue,
+            padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+            onPressed: () {},
+            child: const Text(
+              "FastFood",
+              style: TextStyle(
+                fontSize: 14.0,
+              ),
+            ),
           ),
-          CategoryItem(
-            title: "FastFood",
-            press: () {},
+          SizedBox(width: 7),
+          FlatButton(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+                side: const BorderSide(color: Colors.red)),
+            color: Colors.white,
+            textColor: Colors.blue,
+            padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+            onPressed: () {},
+            child: const Text(
+              "Đồ uống",
+              style: TextStyle(
+                fontSize: 14.0,
+              ),
+            ),
           ),
-          CategoryItem(
-            title: "Nước uống",
-            press: () {},
-          ),
+
+          // CategoryItem(
+          //   title: "Đề xuất",
+          //   isActive: true,
+          //   press: () {},
+          // ),
+          // CategoryItem(
+          //   title: "Cơm",
+          //   press: () {},
+          // ),
+          // CategoryItem(
+          //   title: "Phở",
+          //   press: () {},
+          // ),
+          // CategoryItem(
+          //   title: "FastFood",
+          //   press: () {},
+          // ),
+          // CategoryItem(
+          //   title: "Nước uống",
+          //   press: () {},
+          // ),
         ],
       ),
     );

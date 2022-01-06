@@ -4,6 +4,7 @@ import 'body.dart';
 
 class Splash extends StatelessWidget {
   const Splash({Key? key}) : super(key: key);
+   static String routeName = "/splash";
 
   @override
   Widget build(BuildContext context) {

@@ -16,7 +16,10 @@ class DachSachMonAnYeuThich extends StatelessWidget {
           ),
           Text(
             'Giá: 20000 VND',
-            style: TextStyle(fontSize: 11),
+            style: TextStyle(
+              fontSize: 11,
+              color: Colors.red,
+            ),
           ),
         ],
       ),
