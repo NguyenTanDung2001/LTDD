@@ -25,7 +25,7 @@ class CategoryList extends StatelessWidget {
             color: Colors.yellow,
             textColor: Colors.blue,
             padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-            onPressed: () {}.call(),
+            onPressed: () {},
             child: const Text(
               "Đề xuất",
               style: TextStyle(
@@ -58,7 +58,7 @@ class CategoryList extends StatelessWidget {
             textColor: Colors.blue,
             padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             onPressed: () {
-              Navigator.pushNamed(context, '/monanyeuthich');
+              Navigator.pushNamed(context, '/chitietsanpham');
             },
             child: const Text(
               "Bún",

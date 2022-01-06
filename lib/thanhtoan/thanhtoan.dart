@@ -1,6 +1,6 @@
 import 'package:app_doan/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
-
+import '../sanpham/sanphamthanhtoan.dart';
 import '../app_bar.dart';
 
 class ThanhToan extends StatelessWidget {
@@ -9,6 +9,67 @@ class ThanhToan extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget TongSanPham = Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          'Tổng sản phẩm: ',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+          ),
+        ),
+        Text(
+          '80000 VND',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.red,
+            fontSize: 20,
+          ),
+        ),
+      ],
+    );
+
+    Widget PhiVanChuyen = Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          'Phí vận chuyển: ',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+          ),
+        ),
+        Text(
+          '10000 VND',
+          style: TextStyle(
+            fontSize: 15,
+          ),
+        ),
+      ],
+    );
+
+    Widget TongCong = Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          'Tổng cộng: ',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 25,
+          ),
+        ),
+        Text(
+          '90000 VND',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.red,
+            fontSize: 25,
+          ),
+        ),
+      ],
+    );
+
     return MaterialApp(
       title: 'Món ăn',
       debugShowCheckedModeBanner: false,
@@ -76,7 +137,17 @@ class ThanhToan extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
+            SizedBox(height: 20),
+            DachSachMonAnThanhToan(),
+            SizedBox(height: 5),
+            DachSachMonAnThanhToan(),
+            SizedBox(height: 30),
+            TongSanPham,
+            SizedBox(height: 6),
+            PhiVanChuyen,
+            SizedBox(height: 60),
+            TongCong,
           ],
         ),
       ),

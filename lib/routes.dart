@@ -17,7 +17,7 @@ final Map<String, WidgetBuilder> routes = {
   DangNhap.routeName: (context) => DangNhap(),
   DangKy.routeName: (context) => DangKy(),
   HomeScreen.routeName: (context) => HomeScreen(),
-  MonAnYeuThich.routeName: (context) => MonAnYeuThich(),
+  //MonAnYeuThich.routeName: (context) => MonAnYeuThich(),
   ThanhToan.routeName: (context) => ThanhToan(),
   taikhoan.routeName: (context) => taikhoan(),
 };
