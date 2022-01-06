@@ -1,8 +1,10 @@
 import 'package:app_doan/trang_chu/item_list.dart';
 import 'package:flutter/material.dart';
-import 'package:app_doan/trang_chu/search_box.dart';
+
 import 'package:app_doan/trang_chu/category_list.dart';
 import 'package:app_doan/trang_chu/discount_cart.dart';
+
+import '../search_box.dart';
 
 class Body extends StatelessWidget {
   @override

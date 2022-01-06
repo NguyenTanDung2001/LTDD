@@ -9,21 +9,23 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 35),
+      padding: const EdgeInsets.symmetric(horizontal: 35),
       height: 75,
       width: double.infinity,
       // double.infinity means it cove the available width
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.only(
+        color: Colors.yellow[300],
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
         ),
         boxShadow: [
           BoxShadow(
-            offset: Offset(0, -7),
-            blurRadius: 33,
-            color: Color(0xFF6DAED9).withOpacity(0.11),
+            offset: const Offset(0, 7),
+            blurRadius: 20,
+            spreadRadius: 4,
+            // color: const Color(0xFF6DAED9).withOpacity(0.11),
+            color: Colors.grey.withOpacity(1),
           ),
         ],
       ),
@@ -32,18 +34,28 @@ class BottomNavBar extends StatelessWidget {
         children: <Widget>[
           IconButton(
             icon: SvgPicture.asset("icons/home.svg"),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/trangchu');
+            },
           ),
           IconButton(
-            icon: SvgPicture.asset("icons/Following.svg"),
-            onPressed: () {},
+            icon: SvgPicture.asset("icons/like.svg"),
+            onPressed: () {
+              Navigator.pushNamed(context, '/monanyeuthich');
+            },
           ),
           IconButton(
-            icon: SvgPicture.asset("icons/Glyph.svg"),
-            onPressed: () {},
+            icon: SvgPicture.asset("icons/cart.svg"),
+            onPressed: () {
+              Navigator.pushNamed(context, '/giohang');
+            },
           ),
           IconButton(
-            icon: SvgPicture.asset("icons/person.svg"),
+            icon: SvgPicture.asset(
+              "icons/person1.svg",
+              width: 50,
+              height: 50,
+            ),
             onPressed: () {},
           ),
         ],

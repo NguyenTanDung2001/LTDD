@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class DanhSachSanPham extends StatelessWidget {
   const DanhSachSanPham({Key? key}) : super(key: key);
@@ -34,20 +35,47 @@ class DanhSachSanPham extends StatelessWidget {
       ],
     );
 
-    Widget thanhTimKiem = const Padding(
-      padding: EdgeInsets.fromLTRB(10, 1, 1, 10),
-      child: TextField(
-        cursorColor: Colors.red,
-        decoration: InputDecoration(
-          prefixIcon: Icon(Icons.search),
-          hintText: 'Bạn muốn ăn gì hôm nay?',
-          labelStyle: TextStyle(color: Colors.red),
-        ),
-      ),
-    );
     /*  Widget sanpham = const Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20)) */
-
+    Widget Thongtin = Container(
+      padding: const EdgeInsets.all(20.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: const [
+          Text(
+            'Bún bò',
+          ),
+          Text(',Giá: 3000 VNĐ')
+        ],
+      ),
+    );
+    Widget Thongtin1 = Container(
+      padding: const EdgeInsets.all(20.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: const [
+          Text(
+            'Bún bò',
+          ),
+          Text(',Giá: 3000 VNĐ')
+        ],
+      ),
+    );
+    Widget MonAn = Container(
+      // ignore: deprecated_member_use
+      child: FlatButton(
+        onPressed: () {
+          debugPrint('Button img');
+        },
+        child: Image.asset('images/sanpham1.jpg', width: 100, height: 100),
+      ),
+    );
+    Widget Them = Container(
+      child: IconButton(
+        icon: SvgPicture.asset("icons/add.svg", width: 20, height: 20),
+        onPressed: () {},
+      ),
+    );
     return MaterialApp(
       title: 'danh sach san pham',
       debugShowCheckedModeBanner: false,
@@ -79,10 +107,24 @@ class DanhSachSanPham extends StatelessWidget {
             ],
           ),
         ),
-        body: ListView(
-          children: [
-            thanhTimKiem,
-          ],
+        body: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                flex: 2,
+                child: MonAn,
+              ),
+              Expanded(
+                flex: 3,
+                child: Thongtin,
+              ),
+              Expanded(
+                child: Them,
+              ),
+            ],
+          ),
         ),
       ),
     );

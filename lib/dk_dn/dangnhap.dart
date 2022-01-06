@@ -8,21 +8,6 @@ class DangNhap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Color color = Theme.of(context).primaryColor;
-    // Widget buttonSection = Row(
-    //   //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    //   children: [
-    //     // ignore: deprecated_member_use
-    //     RaisedButton(
-    //       shape: RoundedRectangleBorder(
-    //           borderRadius: BorderRadius.circular(30.0),
-    //           side: const BorderSide(color: Colors.red)),
-    //       onPressed: () {},
-    //       child: buildButtonColumn(color, Icons.arrow_back),
-    //     ),
-    //   ],
-    // );
-
     Widget textSection2 = const Padding(
       padding: EdgeInsets.fromLTRB(10, 1, 1, 10),
       child: Text(
@@ -70,7 +55,7 @@ class DangNhap extends StatelessWidget {
       elevation: 10.0,
       splashColor: Colors.blueGrey,
       onPressed: () {
-        // Perform some action
+        Navigator.pushNamed(context, '/trangchu');
       },
     );
 
@@ -115,12 +100,6 @@ class DangNhap extends StatelessWidget {
                 const SizedBox(height: 5.0),
                 registerButton,
                 const SizedBox(height: 10.0),
-                // const Text(
-                //   'Hoặc đăng nhập qua',
-                //   style: TextStyle(
-                //     fontWeight: FontWeight.bold,
-                //   ),
-                // ),
               ],
             ),
           ],
@@ -128,20 +107,4 @@ class DangNhap extends StatelessWidget {
       ),
     );
   }
-
-  // Column buildButtonColumn(
-  //   Color color,
-  //   IconData icon,
-  // ) {
-  //   return Column(
-  //     mainAxisSize: MainAxisSize.min,
-  //     mainAxisAlignment: MainAxisAlignment.center,
-  //     children: [
-  //       Icon(icon, color: color),
-  //       Container(
-  //         margin: const EdgeInsets.only(left: 10),
-  //       ),
-  //     ],
-  //   );
-  // }
 }
