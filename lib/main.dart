@@ -14,7 +14,7 @@ import 'thanhtoan/thanhtoan.dart';
 import 'yeuthich/sanphamyeuthich.dart';
 import '../sanpham/chitietsanpham.dart';
 import '../sanpham/sanphamthanhtoan.dart';
-
+import 'package:app_doan/taikhoan/account/account.dart';
 //0306191323_PhamAnhKhoa
 
 void main() {
@@ -50,8 +50,9 @@ class MyApp extends StatelessWidget {
         '/taikhoan': (context) => const taikhoan(),
         '/chitietsanpham': (context) => const ChiTietSanPham(),
         '/danhsachmonanthanhtoan': (context) => const DachSachMonAnThanhToan(),
+        '/chinhsuatk':(context)=> const chinhsuatk(),
       },
-      initialRoute: Splash.routeName,
+      initialRoute: '/splash',
       //routes: routes,
     );
   }

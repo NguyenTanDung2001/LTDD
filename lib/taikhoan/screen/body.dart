@@ -20,7 +20,9 @@ class body extends StatelessWidget {
           menu_taikhoan(
             text: "Tài Khoản",
             icon: "icons/User Icon.svg",
-            press: () => {},
+            press: () {
+              Navigator.pushNamed(context, '/chinhsuatk');
+              },
           ),
           menu_taikhoan(
             text: "Thông Báo",
