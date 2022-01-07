@@ -21,7 +21,7 @@ class body extends StatelessWidget {
             text: "Tài Khoản",
             icon: "icons/User Icon.svg",
             press: () {
-              Navigator.pushNamed(context, '/chinhsuatk');
+              Navigator.pushNamed(context, '/chinhsuatk');// lỗi không nhận route
               },
           ),
           menu_taikhoan(
