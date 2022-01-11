@@ -14,6 +14,7 @@ import 'thanhtoan/thanhtoan.dart';
 import 'yeuthich/sanphamyeuthich.dart';
 import '../sanpham/chitietsanpham.dart';
 import '../sanpham/sanphamthanhtoan.dart';
+import '../sanpham/sanpham.dart';
 
 //0306191323_PhamAnhKhoa
 
@@ -46,11 +47,12 @@ class MyApp extends StatelessWidget {
         '/giohang': (context) => const GioHang(),
         '/thanhtoan': (context) => const ThanhToan(),
         '/listyeuthich': (context) => const DachSachMonAnYeuThich(),
-        '/sanpham': (context) => const DanhSachSanPham(),
         '/taikhoan': (context) => const taikhoan(),
         '/chitietsanpham': (context) => const ChiTietSanPham(),
         '/danhsachmonanthanhtoan': (context) => const DachSachMonAnThanhToan(),
+        '/sanpham': (context) => const DanhSachSanPham(),
       },
+
       initialRoute: Splash.routeName,
       //routes: routes,
     );

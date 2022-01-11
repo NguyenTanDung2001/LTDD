@@ -58,7 +58,7 @@ class CategoryList extends StatelessWidget {
             textColor: Colors.blue,
             padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             onPressed: () {
-              Navigator.pushNamed(context, '/chitietsanpham');
+              Navigator.pushNamed(context, '/sanpham');
             },
             child: const Text(
               "Bún",
