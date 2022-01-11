@@ -25,10 +25,10 @@ class DiscountCard extends StatelessWidget {
             height: 166,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              image: const DecorationImage(
-                fit: BoxFit.fill,
-                image: AssetImage("images/beyond-meat-mcdonalds"),
-              ),
+              // image: const DecorationImage(
+              //   fit: BoxFit.fill,
+              //   image: AssetImage("images/beyond-meat-mcdonalds"),
+              // ),
             ),
             child: DecoratedBox(
               decoration: BoxDecoration(
