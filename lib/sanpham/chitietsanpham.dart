@@ -10,7 +10,7 @@ class ChiTietSanPham extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset('images/sanpham1.jpg', width: 420, height: 420),
+          Image.asset('images/sanpham1.jpg', width: 350, height: 350),
         ],
       ),
     );
@@ -22,32 +22,41 @@ class ChiTietSanPham extends StatelessWidget {
             'Tên món ăn: Bún bò',
             style: TextStyle(
               fontWeight: FontWeight.bold,
+              fontSize: 19,
             ),
           ),
           Text(
             'Giá: 20000 VND',
             style: TextStyle(
               fontWeight: FontWeight.bold,
+              fontSize: 19,
+              color: Colors.red,
             ),
           ),
           Text(
             'Tình trạng: Còn hàng',
+            style: TextStyle(
+              fontSize: 17,
+            ),
           ),
         ],
       ),
     );
 
-    Widget SL = Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-      CountStepper(
-        iconColor: Colors.blue,
-        defaultValue: 1,
-        max: 20,
-        min: 1,
-        iconDecrementColor: Colors.red,
-        splashRadius: 25,
-        onPressed: (value) {},
-      )
-    ]);
+    Widget SL = Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        CountStepper(
+          iconColor: Colors.blue,
+          defaultValue: 1,
+          max: 20,
+          min: 1,
+          iconDecrementColor: Colors.red,
+          splashRadius: 25,
+          onPressed: (value) {},
+        )
+      ],
+    );
 
     return MaterialApp(
         title: 'Chi tiết sản phẩm',
@@ -71,12 +80,14 @@ class ChiTietSanPham extends StatelessWidget {
           body: ListView(
             children: [
               ChiTietAnh,
+              ChiTietThongTin,
+              SizedBox(height: 15),
               Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Expanded(
-                    child: ChiTietThongTin,
-                  ),
+                  // Expanded(
+                  //   // child: ChiTietThongTin,
+                  // ),
                   Expanded(
                     child: SL,
                   ),

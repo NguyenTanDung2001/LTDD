@@ -1,33 +1,48 @@
 // ignore_for_file: deprecated_member_use
 
+import 'dart:math';
+
 import 'package:app_doan/dk_dn/dangnhap.dart';
 import 'package:app_doan/taikhoan/screen/anhdaidien.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:app_doan/taikhoan/screen/menu.dart';
 import 'package:app_doan/main.dart';
+import '../account/account.dart';
 
 class body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color color = Theme.of(context).primaryColor;
-    return SingleChildScrollView(
+    return Container(
       padding: EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
           anhdaidien(),
           SizedBox(height: 20),
-          menu_taikhoan(
-            text: "Tài Khoản",
-            icon: "icons/User Icon.svg",
-            press: () {
-              Navigator.pushNamed(context, '/chinhsuatk');// lỗi không nhận route
-              },
-          ),
-          menu_taikhoan(
-            text: "Thông Báo",
-            icon: "icons/Bell.svg",
-            press: () {},
+          // menu_taikhoan(
+          //   text: "Tài Khoản",
+          //   icon: "icons/User Icon.svg",
+          //   press: () {},
+          // ),
+          // menu_taikhoan(
+          //   text: "Thông Báo",
+          //   icon: "icons/Bell.svg",
+          //   press: () {},
+          // ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 25),
+              primary: Colors.white70,
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, '/chinhsuatk');
+            },
+            child: const Text(
+              'Chỉnh sửa tài khoản',
+              style: TextStyle(fontSize: 20, color: Colors.red),
+            ),
           ),
           RaisedButton(
             shape: RoundedRectangleBorder(
@@ -39,7 +54,7 @@ class body extends StatelessWidget {
             elevation: 10.0,
             splashColor: Colors.red,
             onPressed: () {
-              //Navigator.pushNamed(context, DangNhap.routeName);
+              Navigator.pushNamed(context, '/dangnhap');
             },
           )
         ],

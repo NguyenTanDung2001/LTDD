@@ -1,13 +1,12 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
-class body extends StatelessWidget {
-  const body({Key? key}) : super(key: key);
-  
+class bodyForm extends StatelessWidget {
+  const bodyForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    Color color = Theme.of(context).primaryColor;
     Widget textSection2 = const Padding(
       padding: EdgeInsets.fromLTRB(10, 1, 1, 10),
       child: Text(
@@ -78,12 +77,9 @@ class body extends StatelessWidget {
         backgroundColor: Colors.yellow[300],
         body: ListView(
           children: [
-            
             const SizedBox(height: 10.0),
-            
             Column(
               children: [
-               
                 textSection2,
                 const SizedBox(height: 30.0),
                 username,
@@ -94,28 +90,11 @@ class body extends StatelessWidget {
                 const SizedBox(height: 20.0),
                 registerButton,
                 const SizedBox(height: 20.0),
-             
               ],
             ),
           ],
         ),
       ),
-    );
-  }
-
-  Column buildButtonColumn(
-    Color color,
-    IconData icon,
-  ) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(icon, color: color),
-        Container(
-          margin: const EdgeInsets.only(left: 0),
-        ),
-      ],
     );
   }
 }

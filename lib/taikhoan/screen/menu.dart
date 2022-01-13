@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 class menu_taikhoan extends StatelessWidget {
   const menu_taikhoan({
     Key? key,
@@ -23,7 +24,7 @@ class menu_taikhoan extends StatelessWidget {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
           backgroundColor: Color(0xFFF5F6F9),
         ),
-        onPressed: press,
+        onPressed: () {},
         child: Row(
           children: [
             SvgPicture.asset(

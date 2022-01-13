@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:app_doan/trang_chu/category_item.dart';
-import 'package:app_doan/sanpham/danhsachsanpham.dart';
+import 'package:app_doan/sanpham/danhsachsanphamGioHang.dart';
 
 class CategoryList extends StatelessWidget {
   const CategoryList({
@@ -58,7 +58,7 @@ class CategoryList extends StatelessWidget {
             textColor: Colors.blue,
             padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             onPressed: () {
-              Navigator.pushNamed(context, '/chitietsanpham');
+              Navigator.pushNamed(context, '/sanphamBun');
             },
             child: const Text(
               "Bún",

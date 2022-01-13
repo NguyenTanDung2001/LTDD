@@ -17,7 +17,7 @@ class MonAnYeuThich extends StatelessWidget {
       home: Scaffold(
         //backgroundColor: Colors.yellow[300],
         appBar: homeAppBar(context),
-        bottomNavigationBar: const BottomNavBar(),
+
         body: ListView(
           children: [
             SearchBox(
