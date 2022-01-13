@@ -14,7 +14,9 @@ import 'thanhtoan/thanhtoan.dart';
 import 'yeuthich/sanphamyeuthich.dart';
 import '../sanpham/chitietsanpham.dart';
 import '../sanpham/sanphamthanhtoan.dart';
-import 'package:app_doan/taikhoan/account/account.dart';
+//import '../sanpham/sanpham.dart';
+import 'taikhoan/account/account.dart';
+
 //0306191323_PhamAnhKhoa
 
 void main() {
