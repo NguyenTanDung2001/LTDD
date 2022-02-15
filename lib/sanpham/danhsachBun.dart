@@ -28,37 +28,46 @@ class DachSachBun extends StatelessWidget {
     Widget MonAn = Container(
       // ignore: deprecated_member_use
       child: FlatButton(
-        onPressed: () {
-          debugPrint('Button img');
-        },
         child: Image.asset('images/sanpham1.jpg', width: 100, height: 100),
+        onPressed: () {
+          Navigator.pushNamed(context, '/chitietsanpham');
+        },
       ),
     );
     return Container(
-        // padding: const EdgeInsets.symmetric(horizontal: 35),
+      // padding: const EdgeInsets.symmetric(horizontal: 35),
+      child: Material(
         child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Expanded(
-          child: MonAn,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: FlatButton(
+                child:
+                    Image.asset('images/sanpham1.jpg', width: 100, height: 100),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/chitietsanpham');
+                },
+              ),
+            ),
+            Expanded(
+              child: Thongtin,
+            ),
+            Expanded(
+              child: IconButton(
+                icon: SvgPicture.asset("icons/add.svg", width: 20, height: 20),
+                onPressed: () {},
+              ),
+            ),
+            Expanded(
+              child: IconButton(
+                icon: Icon(Icons.favorite),
+                color: Colors.red,
+                onPressed: () {},
+              ),
+            ),
+          ],
         ),
-        Expanded(
-          child: Thongtin,
-        ),
-        Expanded(
-          child: IconButton(
-            icon: SvgPicture.asset("icons/add.svg", width: 20, height: 20),
-            onPressed: () {},
-          ),
-        ),
-        Expanded(
-          child: IconButton(
-            icon: Icon(Icons.favorite),
-            color: Colors.red,
-            onPressed: () {},
-          ),
-        ),
-      ],
-    ));
+      ),
+    );
   }
 }

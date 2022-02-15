@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   smooth_star_rating: ^1.1.1
   count_stepper: ^0.0.4
+  provider: ^6.0.2
   
 
 dev_dependencies:

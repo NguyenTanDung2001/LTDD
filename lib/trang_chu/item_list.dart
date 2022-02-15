@@ -13,25 +13,25 @@ class ItemList extends StatelessWidget {
       child: Row(
         children: <Widget>[
           ItemCard(
-            svgSrc: "icons/burger_beer.svg",
+            image: "images/sanpham1.jpg",
             title: "Burger & Beer",
             shopName: "MacDonald's",
             press: () {},
           ),
           ItemCard(
-            svgSrc: "icons/chinese_noodles.svg",
+            image: "images/sanpham1.jpg",
             title: "Chinese & Noodles",
             shopName: "Wendys",
             press: () {},
           ),
           ItemCard(
-            svgSrc: "icons/burger_beer.svg",
+            image: "images/sanpham1.jpg",
             title: "Burger & Beer",
             shopName: "MacDonald's",
             press: () {},
           ),
           ItemCard(
-            svgSrc: "icons/burger_beer.svg",
+            image: "images/sanpham1.jpg",
             title: "Burger & Beer",
             shopName: "MacDonald's",
             press: () {},

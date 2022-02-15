@@ -16,7 +16,14 @@ import '../sanpham/chitietsanpham.dart';
 import '../sanpham/sanphamthanhtoan.dart';
 //import '../sanpham/sanpham.dart';
 import 'taikhoan/account/account.dart';
+import 'templateSearch.dart';
+import 'package:provider/provider.dart';
+//
+import 'package:app_doan/repository/api.dart';
+import 'package:app_doan/models/modelSanPham.dart';
+import 'package:app_doan/provider/providerSanPham.dart';
 
+import 'package:app_doan/taikhoan/account/formthongtin.dart';
 //0306191323_PhamAnhKhoa
 
 void main() {
@@ -28,34 +35,39 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Home',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          primaryColor: kPrimaryColor,
-          scaffoldBackgroundColor: Colors.white,
-          textTheme: const TextTheme(
-            bodyText1: TextStyle(color: ksecondaryColor),
-            bodyText2: TextStyle(color: ksecondaryColor),
-          )),
-      routes: {
-        '/dangnhap': (context) => const DangNhap(),
-        '/dangky': (context) => const DangKy(),
-        '/trangchu': (context) => HomeScreen(),
-        '/splash': (context) => const Splash(),
-        '/danhsachsanpham': (context) => const DachSachMonAn(),
-        '/monanyeuthich': (context) => const MonAnYeuThich(),
-        '/giohang': (context) => const GioHang(),
-        '/thanhtoan': (context) => const ThanhToan(),
-        '/listyeuthich': (context) => const DachSachMonAnYeuThich(),
-        '/sanphamBun': (context) => const DanhSachSanPhamBun(),
-        '/taikhoan': (context) => const taikhoan(),
-        '/chitietsanpham': (context) => const ChiTietSanPham(),
-        '/danhsachmonanthanhtoan': (context) => const DachSachMonAnThanhToan(),
-        '/chinhsuatk': (context) => const chinhsuatk(),
-      },
-      initialRoute: '/splash',
-      //routes: routes,
-    );
+    return MultiProvider(
+        providers: [ChangeNotifierProvider(create: (_) => providerSanPham())],
+        child: MaterialApp(
+          title: 'Home',
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+              primaryColor: kPrimaryColor,
+              scaffoldBackgroundColor: Colors.white,
+              textTheme: const TextTheme(
+                bodyText1: TextStyle(color: ksecondaryColor),
+                bodyText2: TextStyle(color: ksecondaryColor),
+              )),
+          routes: {
+            '/dangnhap': (context) => const DangNhap(),
+            '/dangky': (context) => const DangKy(),
+            '/trangchu': (context) => HomeScreen(),
+            '/splash': (context) => const Splash(),
+            '/danhsachsanpham': (context) => const DachSachMonAn(),
+            '/monanyeuthich': (context) => const MonAnYeuThich(),
+            '/giohang': (context) => const GioHang(),
+            '/thanhtoan': (context) => const ThanhToan(),
+            '/listyeuthich': (context) => const DachSachMonAnYeuThich(),
+            '/sanphamBun': (context) => const DanhSachSanPhamBun(),
+            '/taikhoan': (context) => const taikhoan(),
+            '/chitietsanpham': (context) => const ChiTietSanPham(),
+            '/danhsachmonanthanhtoan': (context) =>
+                const DachSachMonAnThanhToan(),
+            '/chinhsuatk': (context) => const chinhsuatk(),
+            '/timkiem': (context) => HomePage(),
+            '/chinhsuatk2': (context) => chinhsuatk2(),
+          },
+          initialRoute: '/splash',
+          //routes: routes,
+        ));
   }
 }

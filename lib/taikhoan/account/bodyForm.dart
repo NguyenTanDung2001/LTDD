@@ -10,7 +10,7 @@ class bodyForm extends StatelessWidget {
     Widget textSection2 = const Padding(
       padding: EdgeInsets.fromLTRB(10, 1, 1, 10),
       child: Text(
-        'Chỉnh Sửa Tài Khoản',
+        'Đổi mật khẩu',
         style: TextStyle(
           fontSize: 40,
           fontFamily: 'MyFont',
@@ -71,10 +71,9 @@ class bodyForm extends StatelessWidget {
     );
 
     return MaterialApp(
-      title: 'Đăng kí',
+      title: 'Đổi mật khẩu',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.yellow[300],
         body: ListView(
           children: [
             const SizedBox(height: 10.0),

@@ -3,15 +3,14 @@ import 'package:flutter_svg/svg.dart';
 
 import '../constants.dart';
 
-
 class ItemCard extends StatelessWidget {
-  final String title, shopName, svgSrc;
+  final String title, shopName, image;
   final Function press;
   const ItemCard({
     Key? key,
     required this.title,
     required this.shopName,
-    required this.svgSrc,
+    required this.image,
     required this.press,
   }) : super(key: key);
 
@@ -34,8 +33,12 @@ class ItemCard extends StatelessWidget {
       ),
       child: Material(
         color: Colors.transparent,
-        child: InkWell(
+        // ignore: deprecated_member_use
+        child: FlatButton(
           /* onTap: press, */
+          onPressed: () {
+            Navigator.pushNamed(context, '/chitietsanpham');
+          },
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
@@ -43,13 +46,13 @@ class ItemCard extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(bottom: 15),
                   padding: EdgeInsets.all(25),
-                  decoration: BoxDecoration(
-                    color: kPrimaryColor.withOpacity(0.13),
-                    shape: BoxShape.circle,
-                  ),
-                  child: SvgPicture.asset(
-                    svgSrc,
-                    width: size.width * 0.18,
+                  // decoration: BoxDecoration(
+                  //   color: kPrimaryColor.withOpacity(0.13),
+                  //   shape: BoxShape.circle,
+                  // ),
+                  child: Image.asset(
+                    image,
+                    width: size.width * 0.20,
                     // size.width * 0.18 means it use 18% of total width
                   ),
                 ),

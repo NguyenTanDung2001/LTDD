@@ -6,6 +6,7 @@ import 'package:app_doan/bottom_nav_bar.dart';
 
 import 'account/account.dart';
 import 'package:app_doan/taikhoan/screen/anhdaidien.dart';
+import 'package:app_doan/taikhoan/account/formthongtin.dart';
 
 class taikhoan extends StatelessWidget {
   const taikhoan({Key? key}) : super(key: key);
@@ -37,7 +38,9 @@ class taikhoan extends StatelessWidget {
           body: ListView(
             children: [
               SizedBox(height: 20),
-              anhdaidien(),
+              Column(children: [
+                anhdaidien(),
+              ]),
               SizedBox(height: 20),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -47,6 +50,21 @@ class taikhoan extends StatelessWidget {
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/chinhsuatk');
+                },
+                child: const Text(
+                  'Đổi mật khẩu',
+                  style: TextStyle(fontSize: 20, color: Colors.red),
+                ),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
+                  primary: Colors.white70,
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/chinhsuatk2');
                 },
                 child: const Text(
                   'Chỉnh sửa tài khoản',
