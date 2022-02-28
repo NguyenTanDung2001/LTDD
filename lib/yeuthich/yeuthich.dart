@@ -1,6 +1,6 @@
 import 'package:app_doan/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
-
+import 'package:app_doan/sanpham/danhsachsanphamGioHang.dart';
 import '../app_bar.dart';
 import '../search_box.dart';
 import 'sanphamyeuthich.dart';
@@ -34,14 +34,7 @@ class MonAnYeuThich extends StatelessWidget {
               ),
             ),
             SizedBox(height: 18),
-            const DachSachMonAnYeuThich(),
-            const DachSachMonAnYeuThich(),
-            const DachSachMonAnYeuThich(),
-            const DachSachMonAnYeuThich(),
-            const DachSachMonAnYeuThich(),
-            const DachSachMonAnYeuThich(),
-            const DachSachMonAnYeuThich(),
-            const DachSachMonAnYeuThich(),
+            DsGioHang(),
           ],
         ),
       ),

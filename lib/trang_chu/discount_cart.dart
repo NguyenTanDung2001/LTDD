@@ -16,7 +16,7 @@ class DiscountCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           const Text(
-            "Offers & Discounts",
+            "Các chương trình khuyến mãi",
             style: TextStyle(fontWeight: FontWeight.bold, color: kTextColor),
           ),
           Container(
@@ -57,7 +57,7 @@ class DiscountCard extends StatelessWidget {
                           style: TextStyle(color: Colors.white),
                           children: [
                             TextSpan(
-                              text: "Get Discount of \n",
+                              text: "Giảm giá lần đầu \n",
                               style: TextStyle(fontSize: 16),
                             ),
                             TextSpan(
@@ -68,8 +68,7 @@ class DiscountCard extends StatelessWidget {
                               ),
                             ),
                             TextSpan(
-                              text:
-                                  "at sellVN on your first order & Instant cashback",
+                              text: "Cho đơn hàng đầu tiên của bạn ",
                               style: TextStyle(fontSize: 10),
                             ),
                           ],

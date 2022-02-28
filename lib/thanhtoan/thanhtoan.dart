@@ -1,7 +1,13 @@
 import 'package:app_doan/bottom_nav_bar.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../sanpham/sanphamthanhtoan.dart';
 import '../app_bar.dart';
+
+//import 'package:flutter/rendering.dart';
+// ignore: unused_element
+bool _value = false;
+int val = -1;
 
 class ThanhToan extends StatelessWidget {
   const ThanhToan({Key? key}) : super(key: key);
@@ -49,6 +55,37 @@ class ThanhToan extends StatelessWidget {
       ],
     );
 
+    Widget Phuongthucthanhtoan = Column(
+      children: [
+        ListTile(
+          title: Text("Momo"),
+          leading: Radio(
+            value: 1,
+            groupValue: val,
+            onChanged: (value) {
+              setState(() {
+                val = value.toString() as int;
+              });
+            },
+            activeColor: Colors.green,
+          ),
+        ),
+        ListTile(
+          title: Text("Khi nhận hàng"),
+          leading: Radio(
+            value: 1,
+            groupValue: val,
+            onChanged: (value) {
+              setState(() {
+                val = value.toString() as int;
+              });
+            },
+            activeColor: Colors.green,
+          ),
+        ),
+      ],
+    );
+
     Widget TongCong = Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -82,7 +119,22 @@ class ThanhToan extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 15),
               primary: Colors.red,
             ),
-            onPressed: () {},
+            onPressed: () {
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context) => new AlertDialog(
+                        title: new Text('Xin chào'),
+                        content: new Text(
+                            'Bạn đã đặt hàng thành công, vui lòng đợi món ăn sẽ được giao tới.'),
+                        actions: <Widget>[
+                          new IconButton(
+                              icon: new Icon(Icons.close),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              })
+                        ],
+                      ));
+            },
             child: const Text(
               'Xác nhận mua hàng',
               style: TextStyle(fontSize: 28),
@@ -148,9 +200,26 @@ class ThanhToan extends StatelessWidget {
             PhiVanChuyen,
             SizedBox(height: 60),
             TongCong,
+            SizedBox(height: 15),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Expanded(
+                  child: Text(
+                    'Chọn phương thức thanh toán',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Expanded(
+                  child: Phuongthucthanhtoan,
+                ),
+              ],
+            )
           ],
         ),
       ),
     );
   }
+
+  void setState(Null Function() value) {}
 }

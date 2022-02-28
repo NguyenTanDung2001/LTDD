@@ -45,14 +45,14 @@ class _chisuatk2State extends State<chinhsuatk2> {
                   color: Colors.black),
             ),
             TextFormField(
-              initialValue: "Khoa",
+              initialValue: "Phạm Anh Khoa",
               textInputAction: TextInputAction.next,
               style: const TextStyle(
                   fontSize: 16,
                   color: Colors.black,
                   fontWeight: FontWeight.bold),
               decoration: const InputDecoration(
-                labelText: 'Tên Đăng Nhập',
+                labelText: 'Họ tên',
                 labelStyle: TextStyle(
                   color: Colors.black,
                   fontSize: 18,

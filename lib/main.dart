@@ -1,6 +1,11 @@
 import 'package:app_doan/constants.dart';
+import 'package:app_doan/provider/providerDangNhap.dart';
+import 'package:app_doan/provider/providerGioHang.dart';
 import 'package:app_doan/sanpham/sanphamBun.dart';
 import 'package:app_doan/routes.dart';
+import 'package:app_doan/sanpham/sanphamCom.dart';
+import 'package:app_doan/sanpham/sanphamFastFood.dart';
+import 'package:app_doan/sanpham/sanphamNuoc.dart';
 import 'package:app_doan/trang_chu/trangchu.dart';
 import 'package:app_doan/Splash_Screen/splash.dart';
 import 'package:app_doan/dk_dn/dangky.dart';
@@ -36,7 +41,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-        providers: [ChangeNotifierProvider(create: (_) => providerSanPham())],
+        providers: [
+          ChangeNotifierProvider(create: (_) => providerSanPham()),
+          ChangeNotifierProvider(create: (_) => providerDangNhap()),
+          ChangeNotifierProvider(create: (_) => providerGioHang())
+        ],
         child: MaterialApp(
           title: 'Home',
           debugShowCheckedModeBanner: false,
@@ -48,16 +57,19 @@ class MyApp extends StatelessWidget {
                 bodyText2: TextStyle(color: ksecondaryColor),
               )),
           routes: {
-            '/dangnhap': (context) => const DangNhap(),
+            '/dangnhap': (context) => DangNhap(),
             '/dangky': (context) => const DangKy(),
             '/trangchu': (context) => HomeScreen(),
             '/splash': (context) => const Splash(),
-            '/danhsachsanpham': (context) => const DachSachMonAn(),
+            '/danhsachsanpham': (context) => DsGioHang(),
             '/monanyeuthich': (context) => const MonAnYeuThich(),
             '/giohang': (context) => const GioHang(),
             '/thanhtoan': (context) => const ThanhToan(),
             '/listyeuthich': (context) => const DachSachMonAnYeuThich(),
             '/sanphamBun': (context) => const DanhSachSanPhamBun(),
+            '/sanphamCom': (context) => const DanhSachSanPhamCom(),
+            '/sanphamFastFood': (context) => const DanhSachSanPhamFastFood(),
+            '/sanphamNuoc': (context) => const DanhSachSanPhamNuoc(),
             '/taikhoan': (context) => const taikhoan(),
             '/chitietsanpham': (context) => const ChiTietSanPham(),
             '/danhsachmonanthanhtoan': (context) =>

@@ -4,12 +4,12 @@ import 'package:flutter_svg/svg.dart';
 import '../constants.dart';
 
 class ItemCard extends StatelessWidget {
-  final String title, shopName, image;
+  final String title, gia, image;
   final Function press;
   const ItemCard({
     Key? key,
     required this.title,
-    required this.shopName,
+    required this.gia,
     required this.image,
     required this.press,
   }) : super(key: key);
@@ -59,8 +59,8 @@ class ItemCard extends StatelessWidget {
                 Text(title),
                 SizedBox(height: 10),
                 Text(
-                  shopName,
-                  style: TextStyle(fontSize: 12),
+                  gia,
+                  style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                 ),
               ],
             ),

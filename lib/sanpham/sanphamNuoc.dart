@@ -1,4 +1,3 @@
-import 'package:app_doan/provider/providerGioHang.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../app_bar.dart';
@@ -9,9 +8,11 @@ import 'package:app_doan/models/modelSanPham.dart';
 import 'package:http/http.dart' as http;
 import 'package:app_doan/provider/providerSanPham.dart';
 import 'package:provider/provider.dart';
+import 'package:app_doan/models/modelGioHang.dart';
+import 'package:app_doan/provider/providerGioHang.dart';
 
-class DanhSachSanPhamBun extends StatelessWidget {
-  const DanhSachSanPhamBun({Key? key}) : super(key: key);
+class DanhSachSanPhamNuoc extends StatelessWidget {
+  const DanhSachSanPhamNuoc({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class DanhSachSanPhamBun extends StatelessWidget {
     Widget MonAn = Container(
       // ignore: deprecated_member_use
       child: FlatButton(
-        child: Image.asset('images/sanpham1.jpg', width: 100, height: 100),
+        child: Image.asset('images/nuoc.jpg', width: 100, height: 100),
         onPressed: () {
           Navigator.pushNamed(context, '/chitietsanpham');
         },
@@ -53,7 +54,7 @@ class DanhSachSanPhamBun extends StatelessWidget {
           appBar: homeAppBar(context),
           body: Container(
             child: FutureBuilder<List<modelSanPham>>(
-              future: getAllBun(context),
+              future: getAllNuoc(context),
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
                   List<modelSanPham>? data = snapshot.data;
@@ -63,7 +64,7 @@ class DanhSachSanPhamBun extends StatelessWidget {
                         onChanged: (value) {},
                       ),
                       Text(
-                        'Danh sách bún',
+                        'Danh sách nước uống',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.red,

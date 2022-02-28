@@ -61,30 +61,25 @@ class GioHang extends StatelessWidget {
                   ),
                 ),
                 // ignore: deprecated_member_use
-                FlatButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: const BorderSide(color: Colors.red)),
-                  color: Colors.white,
-                  textColor: Colors.blue,
-                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                  onPressed: () {},
-                  child: const Text(
-                    "Xoá toàn bộ",
-                    style: TextStyle(
-                      fontSize: 14.0,
-                    ),
-                  ),
-                ),
+                // FlatButton(
+                //   shape: RoundedRectangleBorder(
+                //       borderRadius: BorderRadius.circular(18.0),
+                //       side: const BorderSide(color: Colors.red)),
+                //   color: Colors.white,
+                //   textColor: Colors.blue,
+                //   padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                //   onPressed: () {},
+                //   child: const Text(
+                //     "Xoá toàn bộ",
+                //     style: TextStyle(
+                //       fontSize: 14.0,
+                //     ),
+                //   ),
+                // ),
               ],
             ),
             SizedBox(height: 12),
-            DachSachMonAn(),
-            DachSachMonAn(),
-            DachSachMonAn(),
-            DachSachMonAn(),
-            DachSachMonAn(),
-            DachSachMonAn(),
+            DsGioHang(),
           ],
         ),
       ),

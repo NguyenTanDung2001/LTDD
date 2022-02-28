@@ -27,7 +27,26 @@ class taikhoan extends StatelessWidget {
                 primary: Colors.red,
               ),
               onPressed: () {
-                Navigator.pushNamed(context, '/dangnhap');
+                showDialog(
+                    context: context,
+                    builder: (BuildContext context) => new AlertDialog(
+                          title: new Text('Xin chào'),
+                          content: new Text(
+                              'Bạn có muốn đăng xuất khỏi tài khoản này.'),
+                          actions: <Widget>[
+                            new IconButton(
+                                icon: new Icon(Icons.close),
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                }),
+                            new IconButton(
+                                icon: new Icon(Icons.check),
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/dangnhap');
+                                }),
+                          ],
+                        ));
+                //Navigator.pushNamed(context, '/dangnhap');
               },
               child: const Text(
                 'Đăng xuất',
