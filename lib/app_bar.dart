@@ -46,7 +46,9 @@ AppBar homeAppBar(BuildContext context) {
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30.0),
             side: const BorderSide(color: Colors.red)),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, '/thongbao');
+        },
         child: buildButtonColumn(
           color,
           Icons.notifications_active,
