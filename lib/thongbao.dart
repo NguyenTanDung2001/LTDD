@@ -18,21 +18,7 @@ class Thongbao extends StatelessWidget {
       home: Scaffold(
         //backgroundColor: Colors.yellow[300],
         appBar: homeAppBar(context),
-        bottomNavigationBar: Container(
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 15),
-              primary: Colors.red,
-            ),
-            onPressed: () {
-              Navigator.pushNamed(context, '/thanhtoan');
-            },
-            child: const Text(
-              'Thanh toán',
-              style: TextStyle(fontSize: 28),
-            ),
-          ),
-        ),
+
         body: ListView(
           children: <Widget>[
             const SizedBox(height: 18.0),
