@@ -23,7 +23,7 @@ import '../sanpham/sanphamthanhtoan.dart';
 import 'taikhoan/account/account.dart';
 import 'templateSearch.dart';
 import 'package:provider/provider.dart';
-//
+import 'thongbao.dart';
 import 'package:app_doan/repository/api.dart';
 import 'package:app_doan/models/modelSanPham.dart';
 import 'package:app_doan/provider/providerSanPham.dart';
@@ -77,6 +77,7 @@ class MyApp extends StatelessWidget {
             '/chinhsuatk': (context) => const chinhsuatk(),
             '/timkiem': (context) => HomePage(),
             '/chinhsuatk2': (context) => chinhsuatk2(),
+            '/thongbao': (context) => Thongbao(),
           },
           initialRoute: '/splash',
           //routes: routes,
